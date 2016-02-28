@@ -6,15 +6,18 @@ SELF=Rambola:$(basename $0)
 
 # Constants
 AS_USER="sudo -u ${USER_NAME} "
-RSYNC="/usr/local/bin/rsync -aNHAXx --delete --fileflags --protect-decmpfs " 
+RSYNC="/usr/local/bin/rsync "
 SLEEP_DELAY=60 # re-check count every one minute
 let SAFETY_BACKUP_INTERVAL=45 # backup interval in minutes
 
 # Settings
-RAMDISK_SIZE=1024 # Size in Mega Bytes.
+RAMDISK_SIZE=4000 # Size in Mega Bytes.
 RAMDISK_NAME="RamDisk"
-SNAPSHOT_LOCATION="/Users/${USER_NAME}/Library/CachesSnapshot${RAMDISK_NAME}/"
+SNAPSHOT_LOCATION="/Volumes/Time Machine/Backups.{RAMDISK_NAME}"
 TIMELY_BACKUP=yes
+
+
+
 
 # Variables
 COUNT=0
